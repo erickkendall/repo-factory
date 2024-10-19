@@ -8,12 +8,12 @@ variable "github_token" {
   type        = string
 }
 
-variable "dev_api_key" {
-  description = "API key for the dev environment"
-  type        = string
-}
-
-variable "prod_api_key" {
-  description = "API key for the prod environment"
-  type        = string
-}
+# variable "dev_api_key" {
+#   description = "API key for the dev environment"
+#   type        = string
+# }
+# 
+# variable "prod_api_key" {
+#   description = "API key for the prod environment"
+#   type        = string
+# }
