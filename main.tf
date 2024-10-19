@@ -43,21 +43,21 @@ resource "github_repository_environment" "prod" {
   }
 }
 
-# Add a secret to the dev environment
-resource "github_actions_environment_secret" "dev_secret" {
-  repository      = github_repository.example_repo.name
-  environment     = github_repository_environment.dev.environment
-  secret_name     = "DEV_API_KEY"
-  plaintext_value = var.dev_api_key  # Use a variable for the secret value
-}
-
-# Add a secret to the prod environment
-resource "github_actions_environment_secret" "prod_secret" {
-  repository      = github_repository.example_repo.name
-  environment     = github_repository_environment.prod.environment
-  secret_name     = "PROD_API_KEY"
-  plaintext_value = var.prod_api_key  # Use a variable for the secret value
-}
+# # Add a secret to the dev environment
+# resource "github_actions_environment_secret" "dev_secret" {
+#   repository      = github_repository.example_repo.name
+#   environment     = github_repository_environment.dev.environment
+#   secret_name     = "DEV_API_KEY"
+#   plaintext_value = var.dev_api_key  # Use a variable for the secret value
+# }
+# 
+# # Add a secret to the prod environment
+# resource "github_actions_environment_secret" "prod_secret" {
+#   repository      = github_repository.example_repo.name
+#   environment     = github_repository_environment.prod.environment
+#   secret_name     = "PROD_API_KEY"
+#   plaintext_value = var.prod_api_key  # Use a variable for the secret value
+# }
 
 # Output the repository URL
 output "repository_url" {
